@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_margin="4dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="Save Student Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:id="@+id/regNoInput"
+        android:hint="Enter reg no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/regNoInput"
+        android:id="@+id/nameInput"
+        android:hint="Enter name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"
+        android:id="@+id/branchInput"
+        android:hint="Enter branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/branchInput"
+        android:id="@+id/marksInput"
+        android:hint="Enter marks"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/marksInput"
+        android:id="@+id/percentageInput"
+        android:hint="Enter percentage"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:text="Save"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/percentageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="22sp"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSave"
+        android:id="@+id/retrieveHeader"
+        android:text="Retrieve Data"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/retrieveRegNo"
+        android:layout_margin="4dp"
+        app:layout_constraintEnd_toStartOf="@id/btnFind"
+        app:layout_constraintTop_toBottomOf="@id/retrieveHeader"
+        android:hint="Enter reg no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/retrieveRegNo"
+        android:id="@+id/btnFind"
+        android:text="FIND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/fetchedData"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFind"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
